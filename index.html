@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glow Up & Grow Up — 13 Juin 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --rose: #D4537E;
+    --rose-light: #FBEAF0;
+    --rose-dark: #72243E;
+    --gold: #BA7517;
+    --gold-light: #FAEEDA;
+    --dark: #1a1a1a;
+    --mid: #444;
+    --soft: #888;
+    --bg: #fdfaf7;
+    --white: #ffffff;
+    --border: rgba(212,83,126,0.15);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--dark);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(160deg, #1a0a10 0%, #3d1525 50%, #1a0a10 100%);
+    color: white;
+    padding: 80px 24px 70px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(212,83,126,0.18) 0%, transparent 60%),
+                radial-gradient(ellipse at 75% 30%, rgba(186,117,23,0.12) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(212,83,126,0.2);
+    border: 1px solid rgba(212,83,126,0.4);
+    color: #f4a0bc;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 100px;
+    margin-bottom: 28px;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 8vw, 72px);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+  }
+
+  .hero h1 span {
+    font-style: italic;
+    color: #f4a0bc;
+  }
+
+  .hero-sub {
+    font-size: clamp(16px, 3vw, 20px);
+    color: rgba(255,255,255,0.7);
+    font-weight: 300;
+    margin-bottom: 36px;
+    letter-spacing: 0.3px;
+  }
+
+  .hero-info {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+
+  .hero-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .hero-info-item .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.45);
+  }
+
+  .hero-info-item .value {
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+  }
+
+  .divider-dot {
+    width: 4px;
+    height: 4px;
+    background: rgba(212,83,126,0.5);
+    border-radius: 50%;
+    align-self: center;
+  }
+
+  .cta-primary {
+    display: inline-block;
+    background: var(--rose);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 18px 42px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 32px rgba(212,83,126,0.35);
+    letter-spacing: 0.2px;
+  }
+
+  .cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(212,83,126,0.45);
+  }
+
+  .cta-note {
+    margin-top: 14px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .spots-badge {
+    display: inline-block;
+    background: rgba(186,117,23,0.2);
+    border: 1px solid rgba(186,117,23,0.35);
+    color: #FAC775;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 14px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  /* SECTIONS */
+  section { padding: 72px 24px; max-width: 760px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--rose);
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--dark);
+  }
+
+  h2 em {
+    font-style: italic;
+    color: var(--rose-dark);
+  }
+
+  p { color: var(--mid); margin-bottom: 16px; }
+
+  /* WHAT TO EXPECT */
+  .expect-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 36px;
+  }
+
+  .expect-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .expect-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .expect-card h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 6px;
+  }
+
+  .expect-card p {
+    font-size: 13px;
+    color: var(--soft);
+    margin: 0;
+  }
+
+  /* IMMO SECTION */
+  .immo-block {
+    background: linear-gradient(135deg, #1a0a10, #3d1525);
+    border-radius: 20px;
+    padding: 48px 40px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+  }
+
+  .immo-block::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(212,83,126,0.2) 0%, transparent 70%);
+  }
+
+  .immo-block .section-label { color: #f4a0bc; }
+
+  .immo-block h2 { color: white; margin-bottom: 16px; }
+
+  .immo-block p { color: rgba(255,255,255,0.7); }
+
+  .cashflow-highlight {
+    background: rgba(212,83,126,0.15);
+    border: 1px solid rgba(212,83,126,0.3);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .cashflow-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #f4a0bc;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .cashflow-label {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+  }
+
+  .cashflow-label strong { color: white; display: block; font-size: 16px; margin-bottom: 2px; }
+
+  /* PRESTATIONS */
+  .prestations-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 32px;
+  }
+
+  .presta-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 110px;
+  }
+
+  .presta-card.featured {
+    border-color: var(--rose);
+    background: var(--rose-light);
+  }
+
+  .presta-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--dark);
+    line-height: 1.4;
+  }
+
+  .presta-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .presta-price-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+  }
+
+  .price-tag-label {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--soft);
+  }
+
+  .price-tag-label.member {
+    color: var(--rose);
+  }
+
+  .price-normal {
+    font-size: 12px;
+    color: var(--soft);
+    text-decoration: line-through;
+  }
+
+  .price-member {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--rose-dark);
+  }
+
+  .saving-badge {
+    display: inline-block;
+    background: #EAF3DE;
+    color: #3B6D11;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 3px 8px;
+    border-radius: 100px;
+    align-self: center;
+  }
+
+  /* CLUB SECTION */
+  .club-section { background: var(--rose-light); border-radius: 24px; padding: 48px 40px; }
+
+  .club-price-block {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin: 24px 0 8px;
+  }
+
+  .club-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--rose-dark);
+    line-height: 1;
+  }
+
+  .club-price-period {
+    font-size: 16px;
+    color: var(--rose);
+  }
+
+  .club-early-badge {
+    display: inline-block;
+    background: var(--rose);
+    color: white;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+  }
+
+  .club-benefits {
+    list-style: none;
+    margin: 20px 0 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .club-benefits li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--rose-dark);
+  }
+
+  .club-benefits li::before {
+    content: '✓';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: var(--rose);
+    color: white;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .club-economy-block {
+    background: white;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    border: 1px solid rgba(212,83,126,0.15);
+  }
+
+  .economy-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--rose);
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  .economy-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(212,83,126,0.08);
+    color: var(--mid);
+  }
+
+  .economy-row:last-child { border-bottom: none; }
+
+  .economy-row .saving { color: #3B6D11; font-weight: 500; }
+
+  .economy-conclusion {
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--rose-dark);
+    font-weight: 500;
+    line-height: 1.6;
+    background: var(--rose-light);
+    border-radius: 8px;
+    padding: 12px 16px;
+  }
+
+  .spots-remaining {
+    background: white;
+    border: 1px solid rgba(212,83,126,0.2);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .spots-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--rose);
+    line-height: 1;
+  }
+
+  .spots-text { font-size: 13px; color: var(--mid); line-height: 1.5; }
+  .spots-text strong { color: var(--dark); display: block; }
+
+  /* ACOMPTE SECTION */
+  .acompte-block {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px 36px;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .acompte-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--rose-dark);
+    line-height: 1;
+    margin: 16px 0 8px;
+  }
+
+  .acompte-sub {
+    font-size: 14px;
+    color: var(--soft);
+    margin-bottom: 32px;
+  }
+
+  .acompte-sub strong { color: var(--gold); }
+
+  /* TIMELINE */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 32px;
+    position: relative;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 22px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--border);
+  }
+
+  .timeline-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding-bottom: 28px;
+  }
+
+  .timeline-dot {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--rose);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--rose-dark);
+    position: relative;
+    z-index: 1;
+  }
+
+  .timeline-content h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 4px;
+    padding-top: 10px;
+  }
+
+  .timeline-content p {
+    font-size: 13px;
+    color: var(--soft);
+    margin: 0;
+  }
+
+  /* ADDRESS */
+  .address-block {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-top: 32px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .address-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--rose-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 20px;
+  }
+
+  .address-text h3 { font-size: 15px; font-weight: 500; color: var(--dark); margin-bottom: 6px; }
+  .address-text p { font-size: 14px; color: var(--mid); margin: 0; }
+
+  /* FOOTER */
+  footer {
+    background: #1a0a10;
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 32px 24px;
+    font-size: 12px;
+  }
+
+  footer strong { color: rgba(255,255,255,0.8); }
+
+  /* STICKY CTA */
+  .sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid var(--border);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    z-index: 100;
+    box-shadow: 0 -4px 24px rgba(0,0,0,0.08);
+  }
+
+  .sticky-cta-text { font-size: 13px; color: var(--mid); }
+  .sticky-cta-text strong { color: var(--dark); display: block; font-size: 15px; }
+
+  .sticky-btn {
+    display: inline-block;
+    background: var(--rose);
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 28px;
+    border-radius: 100px;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  .sticky-btn:hover { transform: scale(1.02); }
+
+  .page-wrapper { padding-bottom: 80px; }
+
+  hr.section-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0 24px;
+  }
+
+  /* CLUB MINI */
+  .club-mini {
+    background: var(--rose-light);
+    border: 1px solid rgba(212,83,126,0.25);
+    border-radius: 20px;
+    padding: 36px 36px;
+  }
+
+  .club-mini-top {
+    margin-bottom: 20px;
+  }
+
+  .club-mini-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--rose-dark);
+    margin: 10px 0 6px;
+  }
+
+  .club-mini-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--rose-dark);
+    line-height: 1.1;
+  }
+
+  .club-mini-price span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--rose);
+    margin-left: 4px;
+  }
+
+  .club-mini-after {
+    font-size: 12px;
+    color: var(--rose);
+    margin-top: 4px;
+  }
+
+  .club-mini-benefits {
+    list-style: none;
+    margin: 16px 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .club-mini-benefits li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--rose-dark);
+  }
+
+  .club-mini-benefits li::before {
+    content: '✓';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background: var(--rose);
+    color: white;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .club-mini-note {
+    background: white;
+    border: 1px solid rgba(212,83,126,0.15);
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 13px;
+    color: var(--rose-dark);
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .club-mini-cta {
+    background: rgba(212,83,126,0.1);
+    border-left: 3px solid var(--rose);
+    border-radius: 0 8px 8px 0;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: var(--rose-dark);
+    line-height: 1.6;
+  }
+
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="spots-badge">⚡ 15 places uniquement</div>
+  <div class="hero-badge">Vendredi 13 juin 2026 · 18h30</div>
+  <h1>Glow Up<br><span>& Grow Up</span></h1>
+  <p class="hero-sub">Un soir pour ressortir plus belle… et plus intelligente.</p>
+  <div class="hero-info">
+    <div class="hero-info-item">
+      <span class="label">Date</span>
+      <span class="value">13 juin 2026</span>
+    </div>
+    <div class="divider-dot"></div>
+    <div class="hero-info-item">
+      <span class="label">Heure</span>
+      <span class="value">18h30</span>
+    </div>
+    <div class="divider-dot"></div>
+    <div class="hero-info-item">
+      <span class="label">Lieu</span>
+      <span class="value">Windhof, Luxembourg</span>
+    </div>
+    <div class="divider-dot"></div>
+    <div class="hero-info-item">
+      <span class="label">Places</span>
+      <span class="value">15 maximum</span>
+    </div>
+  </div>
+  <a href="https://book.stripe.com/14AbJ00u1gVy3nr0h7dUY0k" class="cta-primary">Réserver ma place — 30€</a>
+  <p class="cta-note">Acompte non remboursable · Déduit du prix de ta prestation le soir J</p>
+</div>
+
+<!-- CE QUI T'ATTEND -->
+<section>
+  <p class="section-label">La soirée</p>
+  <h2>Une soirée qui prend soin de <em>toi</em></h2>
+  <p>Le vendredi 13 juin, on t'accueille dans un centre esthétique au Luxembourg pour une soirée qui combine deux choses que tu mérites : prendre soin de toi… et apprendre à faire travailler ton argent.</p>
+  <p>Au programme : une prestation esthétique au choix, un buffet salé, des boissons, et une intervention exclusive sur l'investissement immobilier. Le tout dans une ambiance intime, entre femmes ambitieuses.</p>
+  <div class="expect-grid">
+    <div class="expect-card">
+      <span class="expect-icon">💅</span>
+      <h3>Prestation esthétique</h3>
+      <p>Ongles, cils, sourcils — tu choisis ta prestation parmi le menu complet.</p>
+    </div>
+    <div class="expect-card">
+      <span class="expect-icon">🥂</span>
+      <h3>Buffet & boissons</h3>
+      <p>Buffet salé et boissons soft offerts pour toute la soirée.</p>
+    </div>
+    <div class="expect-card">
+      <span class="expect-icon">🏠</span>
+      <h3>Intervention immo</h3>
+      <p>Un cas concret : comment générer 500€/mois de cash-flow avec un seul bien.</p>
+    </div>
+    <div class="expect-card">
+      <span class="expect-icon">👩‍💼</span>
+      <h3>Networking</h3>
+      <p>15 femmes résidentes et frontalières ambitieuses. Un réseau qui se construit dans le vrai.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- IMMO -->
+<section>
+  <div class="immo-block">
+    <p class="section-label">L'intervention du soir</p>
+    <h2 style="color:white;">Comment j'ai créé <em style="color:#f4a0bc;">~500€/mois</em> avec un appartement à Thionville</h2>
+    <p>Ce soir-là, La Frontalière Luxembourg partage son cas concret, chiffres à l'appui : un bien acheté à Thionville, une stratégie d'investissement locatif, et un cash-flow mensuel de près de 500€ en complément de revenus.</p>
+    <p>Pas de théorie. Pas de slides ennuyeuses. Le vrai chemin, de l'achat à la première mensualité encaissée.</p>
+    <div class="cashflow-highlight">
+      <div class="cashflow-number">~500€</div>
+      <div class="cashflow-label">
+        <strong>Cash-flow mensuel net</strong>
+        généré sur un seul bien immobilier acheté à Thionville
+      </div>
+    </div>
+    <p style="color:rgba(255,255,255,0.55); font-size: 13px;">Les membres du Club des +10 auront accès au replay complet de cette intervention, même si elles ne peuvent pas être présentes.</p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- PRESTATIONS -->
+<section>
+  <p class="section-label">Le menu du soir</p>
+  <h2>Les prestations <em>disponibles</em></h2>
+
+
+  <div class="prestations-grid">
+    <div class="presta-card">
+      <div class="presta-name">Épilation Sourcils + Teinture Henné</div>
+      <div class="presta-bottom">
+        <div class="presta-price-col">
+          <span class="price-tag-label">Prix normal</span>
+          <span class="price-normal">45€</span>
+        </div>
+        <div class="presta-price-col">
+          <span class="price-tag-label member">Prix adhérente club</span>
+          <span class="price-member">36€</span>
+        </div>
+        <div class="saving-badge">-9€</div>
+      </div>
+    </div>
+    <div class="presta-card">
+      <div class="presta-name">Manucure + Vernis Semi-Permanent</div>
+      <div class="presta-bottom">
+        <div class="presta-price-col">
+          <span class="price-tag-label">Prix normal</span>
+          <span class="price-normal">60€</span>
+        </div>
+        <div class="presta-price-col">
+          <span class="price-tag-label member">Prix adhérente club</span>
+          <span class="price-member">48€</span>
+        </div>
+        <div class="saving-badge">-12€</div>
+      </div>
+    </div>
+    <div class="presta-card">
+      <div class="presta-name">BrowLift</div>
+      <div class="presta-bottom">
+        <div class="presta-price-col">
+          <span class="price-tag-label">Prix normal</span>
+          <span class="price-normal">75€</span>
+        </div>
+        <div class="presta-price-col">
+          <span class="price-tag-label member">Prix adhérente club</span>
+          <span class="price-member">60€</span>
+        </div>
+        <div class="saving-badge">-15€</div>
+      </div>
+    </div>
+    <div class="presta-card">
+      <div class="presta-name">Manucure + Gel sur Ongle Naturel</div>
+      <div class="presta-bottom">
+        <div class="presta-price-col">
+          <span class="price-tag-label">Prix normal</span>
+          <span class="price-normal">85€</span>
+        </div>
+        <div class="presta-price-col">
+          <span class="price-tag-label member">Prix adhérente club</span>
+          <span class="price-member">68€</span>
+        </div>
+        <div class="saving-badge">-17€</div>
+      </div>
+    </div>
+    <div class="presta-card">
+      <div class="presta-name">Rehaussement Cils + Teinture</div>
+      <div class="presta-bottom">
+        <div class="presta-price-col">
+          <span class="price-tag-label">Prix normal</span>
+          <span class="price-normal">85€</span>
+        </div>
+        <div class="presta-price-col">
+          <span class="price-tag-label member">Prix adhérente club</span>
+          <span class="price-member">68€</span>
+        </div>
+        <div class="saving-badge">-17€</div>
+      </div>
+    </div>
+    <div class="presta-card">
+      <div class="presta-name">Extension Cil à Cil</div>
+      <div class="presta-bottom">
+        <div class="presta-price-col">
+          <span class="price-tag-label">Prix normal</span>
+          <span class="price-normal">85€</span>
+        </div>
+        <div class="presta-price-col">
+          <span class="price-tag-label member">Prix adhérente club</span>
+          <span class="price-member">68€</span>
+        </div>
+        <div class="saving-badge">-17€</div>
+      </div>
+    </div>
+    <div class="presta-card">
+      <div class="presta-name">Pack Rehaussement Cils + Épilation + Teinture</div>
+      <div class="presta-bottom">
+        <div class="presta-price-col">
+          <span class="price-tag-label">Prix normal</span>
+          <span class="price-normal">90€</span>
+        </div>
+        <div class="presta-price-col">
+          <span class="price-tag-label member">Prix adhérente club</span>
+          <span class="price-member">72€</span>
+        </div>
+        <div class="saving-badge">-18€</div>
+      </div>
+    </div>
+    <div class="presta-card">
+      <div class="presta-name">Extension Volume Mixte</div>
+      <div class="presta-bottom">
+        <div class="presta-price-col">
+          <span class="price-tag-label">Prix normal</span>
+          <span class="price-normal">100€</span>
+        </div>
+        <div class="presta-price-col">
+          <span class="price-tag-label member">Prix adhérente club</span>
+          <span class="price-member">80€</span>
+        </div>
+        <div class="saving-badge">-20€</div>
+      </div>
+    </div>
+    <div class="presta-card">
+      <div class="presta-name">Pack Extension Cil + Épilation + Teinture Sourcils</div>
+      <div class="presta-bottom">
+        <div class="presta-price-col">
+          <span class="price-tag-label">Prix normal</span>
+          <span class="price-normal">110€</span>
+        </div>
+        <div class="presta-price-col">
+          <span class="price-tag-label member">Prix adhérente club</span>
+          <span class="price-member">88€</span>
+        </div>
+        <div class="saving-badge">-22€</div>
+      </div>
+    </div>
+    <div class="presta-card">
+      <div class="presta-name">Pack Manucure + Pédicure avec dépose</div>
+      <div class="presta-bottom">
+        <div class="presta-price-col">
+          <span class="price-tag-label">Prix normal</span>
+          <span class="price-normal">120€</span>
+        </div>
+        <div class="presta-price-col">
+          <span class="price-tag-label member">Prix adhérente club</span>
+          <span class="price-member">96€</span>
+        </div>
+        <div class="saving-badge">-24€</div>
+      </div>
+    </div>
+    <div class="presta-card">
+      <div class="presta-name">Extension Volume Russe</div>
+      <div class="presta-bottom">
+        <div class="presta-price-col">
+          <span class="price-tag-label">Prix normal</span>
+          <span class="price-normal">130€</span>
+        </div>
+        <div class="presta-price-col">
+          <span class="price-tag-label member">Prix adhérente club</span>
+          <span class="price-member">104€</span>
+        </div>
+        <div class="saving-badge">-26€</div>
+      </div>
+    </div>
+    <div class="presta-card">
+      <div class="presta-name">Pack Extension Cil + Épilation + BrowLift</div>
+      <div class="presta-bottom">
+        <div class="presta-price-col">
+          <span class="price-tag-label">Prix normal</span>
+          <span class="price-normal">140€</span>
+        </div>
+        <div class="presta-price-col">
+          <span class="price-tag-label member">Prix adhérente club</span>
+          <span class="price-member">112€</span>
+        </div>
+        <div class="saving-badge">-28€</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="presta-note">
+    <strong>💡 Rappel :</strong> Ton acompte de 30€ est déduit directement du prix de ta prestation le soir J. Tu ne paies que le solde restant sur place.
+  </div>
+</section>
+
+<hr class="section-divider">
+<!-- CLUB -->
+<section>
+  <div class="club-mini">
+    <div class="club-mini-top">
+      <span class="club-early-badge">⭐ Offre fondateur — 30 places</span>
+      <div class="club-mini-title">Le Club des +10</div>
+      <div class="club-mini-price">19,99€<span>/mois · tarif fondateur garanti à vie</span></div>
+      <div class="club-mini-after">Après les 30 premières places → 29,99€/mois</div>
+    </div>
+    <ul class="club-mini-benefits">
+      <li>-20% sur toutes les prestations chez nos partenaires esthétique</li>
+      <li>Accès prioritaire et tarif réduit à tous les événements du club</li>
+      <li>Réductions exclusives chez nos partenaires (beauté, loisirs, services…)</li>
+      <li>Replay de l'intervention immobilier + cas pratique inclus</li>
+    </ul>
+    <div class="club-mini-note">
+      Avec les réductions cumulées sur les événements et partenaires, ton adhésion est rentabilisée dès le premier mois. Rien que ta place à cet événement t'aurait coûté moins cher en étant membre.
+    </div>
+    <div class="club-mini-cta">
+      <span>🎉 Une fois ta place réservée, je t'envoie un message pour te proposer de rejoindre le club — et bénéficier du -20% le soir J.</span>
+    </div>
+  </div>
+</section>
+<hr class="section-divider">
+
+<!-- ACOMPTE -->
+<section>
+  <p class="section-label">Réservation</p>
+  <h2>Comment ça <em>fonctionne</em> ?</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot">1</div>
+      <div class="timeline-content">
+        <h3>Tu réserves ta place avec 30€ d'acompte</h3>
+        <p>L'acompte est non remboursable et sécurise ta place parmi les 15 disponibles.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot">2</div>
+      <div class="timeline-content">
+        <h3>Je te contacte personnellement</h3>
+        <p>Une fois ta place réservée, je t'envoie un message pour confirmer ta prestation et te proposer de rejoindre le Club des +10 — pour bénéficier du -20% le soir J.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot">3</div>
+      <div class="timeline-content">
+        <h3>Le 13 juin à 18h30, tu arrives</h3>
+        <p>Buffet, boissons, accueil. L'intervention immo commence à 19h00.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot">4</div>
+      <div class="timeline-content">
+        <h3>Tu paies le solde de ta prestation sur place</h3>
+        <p>Les 30€ d'acompte sont déduits directement. Les membres du club payent avec la réduction -20%.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="acompte-block" style="margin-top: 36px;">
+    <p class="section-label" style="text-align:center;">Acompte de réservation</p>
+    <div class="acompte-amount">30€</div>
+    <p class="acompte-sub">Non remboursable · <strong>Déduit de ta prestation le soir J</strong></p>
+    <a href="https://book.stripe.com/14AbJ00u1gVy3nr0h7dUY0k" class="cta-primary">Je réserve ma place maintenant</a>
+    <p style="margin-top:12px; font-size:12px; color:var(--soft);">Paiement sécurisé par Stripe</p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ADRESSE -->
+<section>
+  <p class="section-label">Accès</p>
+  <h2>Où nous <em>retrouver</em></h2>
+  <p>L'événement se déroule dans un centre esthétique au Luxembourg, facilement accessible depuis la frontière française.</p>
+
+  <div class="address-block">
+    <div class="address-icon">📍</div>
+    <div class="address-text">
+      <h3>Centre esthétique de Sarah</h3>
+      <p>11, Rue des 3 Cantons<br>Windhof (Koerich) L-8399<br>Luxembourg</p>
+    </div>
+  </div>
+
+  <p style="margin-top:16px; font-size:13px; color:var(--soft);">Parking disponible sur place. Accès depuis Thionville et la Moselle en environ 30 minutes.</p>
+</section>
+
+</div>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta">
+  <div class="sticky-cta-text">
+    <strong>Glow Up & Grow Up · 13 juin · 18h30</strong>
+    15 places · Windhof, Luxembourg
+  </div>
+  <a href="https://book.stripe.com/14AbJ00u1gVy3nr0h7dUY0k" class="sticky-btn">Réserver — 30€</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <strong>La Frontalière Luxembourg</strong> · Événement privé · 15 places uniquement<br>
+  <span style="margin-top:6px; display:block;">Questions ? Contacte-nous via Instagram @lafrontaliereluxembourg</span>
+</footer>
+
+</body>
+</html>
