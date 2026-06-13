@@ -3,915 +3,702 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Glow Up & Grow Up — 13 Juin 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Afterwork La Frontalière Luxembourg — Terville, 25 juin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
   :root {
-    --dark: #1E0810;
-    --dark-mid: #2A0F1A;
-    --rose: #C4607A;
-    --rose-light: #E8A0B0;
-    --rose-btn: #C05070;
-    --cream: #F5F0EA;
-    --cream-card: #FFFFFF;
-    --text-dark: #1A0A10;
-    --text-muted: #8A7070;
-    --text-muted-dark: rgba(255,255,255,0.5);
-    --gold-badge: #8B7020;
-    --gold-badge-bg: #2E2208;
+    --noir: #100E0E;
+    --noir-2: #1A1716;
+    --noir-3: #211D1C;
+    --border: #2A2625;
+    --rouge: #D23A2E;
+    --rouge-2: #E8554A;
+    --rouge-bg: rgba(210, 58, 46, 0.09);
+    --blanc: #F3EFE9;
+    --gris: #9B938E;
+    --gris-2: #C7BFB9;
+    --maxw: 680px;
   }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
 
   body {
+    background: var(--noir);
+    color: var(--blanc);
     font-family: 'Inter', sans-serif;
-    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-    background: var(--cream);
-    color: var(--text-dark);
   }
 
-  .hero {
-    min-height: 100vh;
-    background: radial-gradient(ellipse 120% 80% at 50% -10%, #4a1030 0%, #2A0F1A 45%, #1E0810 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  ::selection { background: var(--rouge); color: var(--blanc); }
+
+  /* TOP STRIP */
+  .top-strip {
+    background: var(--rouge);
+    color: var(--blanc);
     text-align: center;
-    padding: 60px 24px 80px;
-    position: relative;
+    padding: 11px 20px;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
   }
 
-  .pill {
+  /* HERO */
+  .hero {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 56px 24px 44px;
+    text-align: center;
+    animation: rise 0.7s ease both;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .eyebrow {
     display: inline-block;
-    border-radius: 999px;
-    font-size: 13px;
-    padding: 10px 22px;
-    margin-bottom: 20px;
-    letter-spacing: 0.3px;
-  }
-
-  .pill-gold {
-    background: var(--gold-badge-bg);
-    color: #D4A830;
-    border: 1px solid #6B5010;
-  }
-
-  .pill-rose {
-    background: rgba(180, 60, 90, 0.2);
-    color: var(--rose-light);
-    border: 1px solid rgba(180, 60, 90, 0.35);
+    color: var(--rouge-2);
     font-size: 12px;
-    letter-spacing: 1.5px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
 
   .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(52px, 12vw, 88px);
-    font-weight: 400;
-    color: white;
-    line-height: 1.05;
-    margin-bottom: 20px;
+    font-family: 'Fraunces', serif;
+    font-size: clamp(34px, 6.2vw, 56px);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin-bottom: 22px;
   }
 
   .hero h1 em {
     font-style: italic;
-    color: var(--rose-light);
-    display: block;
+    color: var(--rouge-2);
   }
 
   .hero-sub {
-    font-size: 16px;
-    color: rgba(255,255,255,0.55);
-    max-width: 400px;
-    margin: 0 auto 52px;
-    line-height: 1.7;
-  }
-
-  .meta-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px 48px;
-    margin-bottom: 48px;
-    max-width: 380px;
-    width: 100%;
-  }
-
-  .meta-item { text-align: center; }
-
-  .meta-label {
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.35);
-    display: block;
-    margin-bottom: 6px;
-  }
-
-  .meta-value {
     font-size: 17px;
-    color: white;
-    font-weight: 400;
+    color: var(--gris-2);
+    max-width: 500px;
+    margin: 0 auto 30px;
   }
 
+  .meta-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--blanc);
+    margin-bottom: 32px;
+  }
+
+  .meta-row .sep {
+    color: var(--rouge);
+    font-weight: 700;
+  }
+
+  /* BUTTONS */
   .btn {
     display: inline-block;
-    background: var(--rose);
-    color: white;
-    text-decoration: none;
+    background: var(--rouge);
+    color: var(--blanc);
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
-    font-weight: 400;
-    padding: 18px 44px;
-    border-radius: 999px;
-    transition: all 0.25s ease;
-    letter-spacing: 0.2px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    padding: 17px 40px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 6px 24px rgba(210, 58, 46, 0.25);
   }
 
   .btn:hover {
-    background: #d4708a;
+    background: var(--rouge-2);
     transform: translateY(-2px);
-    box-shadow: 0 16px 40px rgba(196,96,122,0.4);
+    box-shadow: 0 10px 30px rgba(210, 58, 46, 0.35);
   }
 
-  .btn-note {
-    display: block;
-    font-size: 12px;
-    color: rgba(255,255,255,0.35);
-    margin-top: 16px;
-    text-align: center;
+  .btn:focus-visible {
+    outline: 3px solid var(--rouge-2);
+    outline-offset: 3px;
   }
 
-  .sticky-bar {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    background: white;
-    border-top: 1px solid rgba(0,0,0,0.08);
-    padding: 16px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 100;
-    box-shadow: 0 -4px 24px rgba(0,0,0,0.08);
+  .cta-note {
+    font-size: 13px;
+    color: var(--gris);
+    margin-top: 14px;
   }
 
-  .sticky-info { font-size: 14px; font-weight: 400; line-height: 1.5; }
-  .sticky-info small { font-size: 12px; color: var(--text-muted); display: block; }
+  .cta-note strong { color: var(--gris-2); }
 
-  .btn-sticky {
-    background: var(--rose);
-    color: white;
-    border: none;
-    font-size: 14px;
-    font-weight: 400;
-    padding: 14px 28px;
-    border-radius: 999px;
-    cursor: pointer;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: background 0.2s;
-  }
-
-  .btn-sticky:hover { background: #d4708a; }
-
-  .section-light {
-    background: var(--cream);
-    padding: 80px 24px;
-    max-width: 760px;
+  /* SECTIONS */
+  section {
+    max-width: var(--maxw);
     margin: 0 auto;
+    padding: 52px 24px;
   }
 
-  .section-label {
-    font-size: 11px;
-    letter-spacing: 2.5px;
+  .label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--rose);
-    display: block;
+    color: var(--rouge-2);
     margin-bottom: 16px;
   }
 
   h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(32px, 5vw, 48px);
-    font-weight: 400;
-    line-height: 1.15;
-    margin-bottom: 24px;
-    color: var(--text-dark);
+    font-family: 'Fraunces', serif;
+    font-size: clamp(25px, 4.2vw, 36px);
+    font-weight: 900;
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
   }
 
-  h2 em {
-    font-style: italic;
-    color: var(--rose);
+  p {
+    color: var(--gris-2);
+    margin-bottom: 16px;
   }
 
-  .body-text {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #3A2020;
-    opacity: 0.85;
-  }
+  p:last-child { margin-bottom: 0; }
 
-  .divider-line {
+  .divider {
+    max-width: var(--maxw);
+    margin: 0 auto;
     height: 1px;
-    background: rgba(0,0,0,0.08);
-    max-width: 760px;
-    margin: 0 auto;
+    background: var(--border);
   }
 
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 16px;
-    margin-top: 40px;
+  /* MOT DE MARYAM */
+  .mot {
+    background: var(--noir-2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--rouge);
+    border-radius: 0 6px 6px 0;
+    padding: 32px 30px;
+    margin-top: 4px;
   }
 
-  .card {
-    background: white;
-    border: 1px solid rgba(0,0,0,0.07);
-    border-radius: 16px;
-    padding: 28px 20px;
-    text-align: center;
-  }
+  .mot .label { margin-bottom: 14px; }
 
-  .card-icon { font-size: 28px; margin-bottom: 14px; display: block; }
-
-  .card h3 {
-    font-family: 'Playfair Display', serif;
+  .mot p {
     font-size: 17px;
+    color: var(--blanc);
+    line-height: 1.65;
+  }
+
+  .mot .signature {
+    margin-top: 18px;
+    font-family: 'Fraunces', serif;
+    font-size: 19px;
     font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--text-dark);
+    font-style: italic;
+    color: var(--rouge-2);
   }
 
-  .card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
-
-  .maryam-block {
-    background: white;
-    border: 1px solid rgba(0,0,0,0.07);
-    border-radius: 20px;
-    padding: 48px 40px;
-    margin-top: 40px;
-  }
-
-  .stat-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 24px;
-    margin-top: 40px;
-    padding-top: 40px;
-    border-top: 1px solid rgba(0,0,0,0.07);
-  }
-
-  .stat-item { text-align: center; }
-
-  .stat-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    color: var(--rose);
-    display: block;
-    line-height: 1;
-    margin-bottom: 6px;
-  }
-
-  .stat-desc { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
-
-  .section-dark {
-    background: var(--dark-mid);
-    padding: 80px 24px;
-  }
-
-  .section-dark-inner {
-    max-width: 760px;
-    margin: 0 auto;
-  }
-
-  .section-dark .section-label { color: var(--rose-light); }
-  .section-dark h2 { color: white; }
-  .section-dark h2 em { color: var(--rose-light); }
-  .section-dark .body-text { color: rgba(255,255,255,0.65); }
-
-  .immo-points {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-top: 36px;
-  }
-
-  .immo-point {
-    display: flex;
-    gap: 18px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 12px;
-    padding: 20px 24px;
-  }
-
-  .immo-point-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
-
-  .immo-point p { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.7; }
-  .immo-point strong { color: white; }
-
-  .cashflow-box {
-    text-align: center;
-    background: rgba(196,96,122,0.12);
-    border: 1px solid rgba(196,96,122,0.3);
-    border-radius: 16px;
-    padding: 40px;
-    margin-top: 36px;
-  }
-
-  .cashflow-big {
-    font-family: 'Playfair Display', serif;
-    font-size: 72px;
-    color: var(--rose-light);
-    display: block;
-    line-height: 1;
-    margin-bottom: 10px;
-  }
-
-  .cashflow-label {
-    font-size: 12px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.4);
-  }
-
-  .club-block {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(196,96,122,0.3);
-    border-radius: 20px;
-    padding: 48px 40px;
-    margin-top: 40px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .club-block::before {
-    content: '+10';
-    font-family: 'Playfair Display', serif;
-    font-size: 180px;
-    color: white;
-    opacity: 0.03;
-    position: absolute;
-    right: -10px;
-    bottom: -30px;
-    line-height: 1;
-    pointer-events: none;
-  }
-
-  .club-price {
-    font-family: 'Playfair Display', serif;
-    font-size: 56px;
-    color: var(--rose-light);
-    display: block;
-    margin: 20px 0 6px;
-    line-height: 1;
-  }
-
-  .club-price-note {
-    font-size: 12px;
-    color: rgba(255,255,255,0.35);
-    letter-spacing: 0.5px;
-    display: block;
-    margin-bottom: 32px;
-  }
-
-  .club-perks {
+  /* PROBLEM LIST */
+  .prob-list {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    margin-bottom: 36px;
+    gap: 12px;
+    margin-top: 24px;
   }
 
-  .club-perks li {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    font-size: 14px;
-    color: rgba(255,255,255,0.75);
-    line-height: 1.6;
+  .prob-list li {
+    background: var(--noir-2);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 16px 18px;
+    font-size: 15px;
+    color: var(--gris-2);
+    position: relative;
+    padding-left: 44px;
   }
 
-  .club-perks li::before {
-    content: '—';
-    color: var(--rose-light);
-    flex-shrink: 0;
+  .prob-list li::before {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    width: 14px;
+    height: 2px;
+    background: var(--rouge);
   }
 
-  .club-urgency {
-    background: rgba(196,96,122,0.1);
-    border: 1px solid rgba(196,96,122,0.25);
-    border-radius: 12px;
-    padding: 18px 22px;
-    font-size: 13px;
-    color: rgba(255,255,255,0.55);
-    margin-top: 28px;
-    line-height: 1.7;
-  }
-
-  .club-urgency strong { color: var(--rose-light); }
-
-  .prestations-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 40px;
-    background: white;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.05);
-  }
-
-  .prestations-table th {
-    background: #FBF7F4;
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    padding: 14px 20px;
-    text-align: left;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-  }
-
-  .prestations-table th:last-child,
-  .prestations-table td:last-child { text-align: right; }
-
-  .prestations-table td {
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    font-size: 14px;
-    color: var(--text-dark);
-  }
-
-  .prestations-table tr:last-child td { border-bottom: none; }
-  .prestations-table tr:hover td { background: #FBF7F4; }
-
-  .price-normal { color: #b0a0a0; text-decoration: line-through; font-size: 13px; }
-  .price-club { color: var(--rose); font-weight: 500; }
-  .economy { font-size: 11px; color: #b05060; display: block; }
-
-  .rappel {
-    margin-top: 20px;
-    padding: 16px 20px;
-    background: rgba(196,96,122,0.06);
-    border-left: 3px solid var(--rose);
-    border-radius: 0 8px 8px 0;
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.7;
-  }
-
-  .steps {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin-top: 40px;
-  }
-
-  .step {
-    display: flex;
-    gap: 28px;
-    padding: 28px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.07);
-  }
-
-  .step:last-child { border-bottom: none; }
-
-  .step-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    color: var(--rose);
-    opacity: 0.4;
-    flex-shrink: 0;
-    width: 44px;
-    line-height: 1.1;
-  }
-
-  .step h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 6px;
-    color: var(--text-dark);
-  }
-
-  .step p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
-
-  .lieu-block {
-    background: white;
-    border: 1px solid rgba(0,0,0,0.07);
-    border-radius: 20px;
-    padding: 40px;
-    margin-top: 40px;
+  /* OFFER GRID */
+  .offer-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
+    gap: 14px;
+    margin-top: 28px;
   }
 
-  @media (max-width: 560px) { .lieu-block { grid-template-columns: 1fr; } }
+  .offer-card {
+    background: var(--noir-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 24px 22px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
 
-  .lieu-info h3 {
-    font-family: 'Playfair Display', serif;
+  .offer-card:hover {
+    border-color: var(--rouge);
+    transform: translateY(-3px);
+  }
+
+  .offer-card .num {
+    font-family: 'Fraunces', serif;
     font-size: 22px;
-    font-weight: 400;
-    margin-bottom: 14px;
-    color: var(--text-dark);
+    font-weight: 900;
+    color: var(--rouge-2);
+    display: block;
+    margin-bottom: 10px;
   }
 
-  .lieu-info p { font-size: 14px; color: var(--text-muted); line-height: 1.8; }
-
-  .parking-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 18px;
-    background: rgba(196,96,122,0.08);
-    border: 1px solid rgba(196,96,122,0.2);
-    border-radius: 999px;
-    padding: 10px 18px;
-    font-size: 13px;
-    color: var(--rose);
-    font-weight: 500;
+  .offer-card h3 {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--blanc);
+    margin-bottom: 7px;
   }
 
-  .lieu-map {
-    background: #FBF7F4;
-    border: 1px solid rgba(0,0,0,0.07);
-    border-radius: 12px;
-    height: 180px;
+  .offer-card p {
+    font-size: 13.5px;
+    color: var(--gris);
+    line-height: 1.5;
+  }
+
+  /* AUDIENCE */
+  .aud-list {
+    list-style: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 13px;
+    margin-top: 24px;
+  }
+
+  .aud-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    font-size: 15.5px;
+    color: var(--gris-2);
+  }
+
+  .aud-list li::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    background: var(--rouge);
+    flex-shrink: 0;
+    margin-top: 8px;
+    transform: rotate(45deg);
+  }
+
+  /* PASS / PRICING */
+  .pass {
+    position: relative;
+    background: var(--noir-2);
+    border: 1px solid var(--rouge);
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 30px auto 0;
+    overflow: hidden;
+  }
+
+  .pass-head {
+    text-align: center;
+    padding: 32px 28px 26px;
+    position: relative;
+  }
+
+  .pass-head::after,
+  .pass-head::before {
+    content: '';
+    position: absolute;
+    bottom: -11px;
+    width: 22px;
+    height: 22px;
+    background: var(--noir);
+    border-radius: 50%;
+  }
+
+  .pass-head::before { left: -11px; }
+  .pass-head::after { right: -11px; }
+
+  .pass .price {
+    font-family: 'Fraunces', serif;
+    font-size: 62px;
+    font-weight: 900;
+    color: var(--rouge-2);
+    line-height: 1;
+  }
+
+  .pass .price-sub {
+    font-size: 13.5px;
+    color: var(--gris);
+    margin-top: 6px;
+  }
+
+  .pass-divider {
+    border: none;
+    border-top: 1px dashed var(--border);
+    margin: 0;
+  }
+
+  .pass-body {
+    padding: 28px;
+  }
+
+  .pass-incl {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    margin-bottom: 26px;
+  }
+
+  .pass-incl li {
+    font-size: 14.5px;
+    color: var(--gris-2);
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    line-height: 1.4;
+  }
+
+  .pass-incl li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--rouge);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
+
+  .pass-body .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+  }
+
+  .urgency {
+    max-width: 400px;
+    margin: 14px auto 0;
+    text-align: center;
     font-size: 13px;
-    color: var(--text-muted);
+    color: var(--gris);
+    line-height: 1.5;
+  }
+
+  .urgency strong { color: var(--rouge-2); }
+
+  /* LOCATION */
+  .loc {
+    background: var(--noir-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 26px 28px;
+    margin-top: 24px;
+  }
+
+  .loc h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--blanc);
+    margin-bottom: 8px;
+  }
+
+  .loc p {
+    font-size: 14.5px;
+    color: var(--gris);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* FAQ */
+  .faq {
+    margin-top: 26px;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+
+  .faq-item:first-child { border-top: 1px solid var(--border); }
+
+  .faq-item h3 {
+    font-size: 15.5px;
+    font-weight: 600;
+    color: var(--blanc);
+    margin-bottom: 8px;
+  }
+
+  .faq-item p {
+    font-size: 14.5px;
+    color: var(--gris);
+    margin: 0;
+  }
+
+  /* FINAL CTA */
+  .final {
     text-align: center;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 60px 24px 64px;
   }
 
-  .lieu-map a {
-    color: var(--rose);
-    text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    font-weight: 500;
+  .final h2 { margin-bottom: 14px; }
+
+  .final p {
+    max-width: 420px;
+    margin: 0 auto 30px;
+    font-size: 16px;
+    color: var(--gris-2);
   }
 
-  .footer-cta {
-    background: radial-gradient(ellipse 120% 80% at 50% 110%, #4a1030 0%, #2A0F1A 50%, #1E0810 100%);
+  .final .cta-note { margin-top: 18px; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 26px 24px;
     text-align: center;
-    padding: 100px 24px 140px;
+    font-size: 12.5px;
+    color: var(--gris);
+    line-height: 1.8;
   }
 
-  .footer-cta h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(40px, 7vw, 64px);
-    font-weight: 400;
-    color: white;
-    margin-bottom: 14px;
-    line-height: 1.1;
+  @media (max-width: 540px) {
+    .offer-grid { grid-template-columns: 1fr; }
+    .mot, .loc { padding: 26px 22px; }
+    .btn { padding: 16px 32px; width: 100%; text-align: center; }
+    .hero { padding-top: 44px; }
   }
 
-  .footer-cta h2 em { font-style: italic; color: var(--rose-light); }
-
-  .footer-cta p { font-size: 15px; color: rgba(255,255,255,0.45); margin-bottom: 44px; }
-
-  .footer-meta {
-    margin-top: 48px;
-    font-size: 12px;
-    color: rgba(255,255,255,0.3);
-    line-height: 2;
-  }
-
-  .footer-meta a { color: var(--rose-light); text-decoration: none; }
-
-  @media (max-width: 640px) {
-    .section-light, .section-dark-inner { padding-left: 0; padding-right: 0; }
-    .maryam-block, .club-block { padding: 32px 24px; }
-    .lieu-block { padding: 28px 20px; }
-    .prestations-table th, .prestations-table td { padding: 12px 14px; font-size: 13px; }
+  @media (prefers-reduced-motion: reduce) {
+    .hero { animation: none; }
+    * { transition: none !important; }
   }
 </style>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wzliwt4b24");
-</script>
 </head>
 <body>
 
+<div class="top-strip">
+  Places limitées · Jeudi 25 juin 2026 · Terville (57)
+</div>
+
 <!-- HERO -->
-<div class="hero">
-  <div class="pill pill-gold">⚡ 15 places uniquement</div>
-  <div class="pill pill-rose">Samedi 13 juin 2026 · 18h30</div>
+<header class="hero">
+  <span class="eyebrow">Afterwork La Frontalière Luxembourg</span>
+  <h1>Le réseau qui te fait <em>capter les meilleures opportunités</em> au Luxembourg</h1>
+  <p class="hero-sub">
+    Un afterwork entre frontaliers et résidents luxembourgeois. De vraies conversations, des connexions qui comptent, dans un cadre où tout le monde joue le jeu.
+  </p>
 
-  <h1>Glow Up<em>&amp; Grow Up</em></h1>
-
-  <p class="hero-sub">Un soir pour ressortir plus belle… et plus intelligente sur l'argent.</p>
-
-  <div class="meta-grid">
-    <div class="meta-item">
-      <span class="meta-label">Date</span>
-      <span class="meta-value">13 juin 2026</span>
-    </div>
-    <div class="meta-item">
-      <span class="meta-label">Heure</span>
-      <span class="meta-value">18h30</span>
-    </div>
-    <div class="meta-item">
-      <span class="meta-label">Lieu</span>
-      <span class="meta-value">Windhof, Luxembourg</span>
-    </div>
-    <div class="meta-item">
-      <span class="meta-label">Places</span>
-      <span class="meta-value">15 maximum</span>
-    </div>
+  <div class="meta-row">
+    <span>Jeudi 25 juin 2026</span>
+    <span class="sep">·</span>
+    <span>18h30</span>
+    <span class="sep">·</span>
+    <span>All Pizza All Pasta, Terville</span>
   </div>
 
-  <a href="https://book.stripe.com/14AbJ00u1gVy3nr0h7dUY0k" class="btn">Réserver ma place — 30€</a>
-  <span class="btn-note">Acompte non remboursable · Déduit du prix de ta prestation le soir J</span>
-</div>
+  <a href="https://buy.stripe.com/9B6fZga4BdJm3nr4xndUY0l" class="btn" target="_blank" rel="noopener">Réserver ma place à 30 €</a>
+  <p class="cta-note">Buffet à volonté et un soft inclus. <strong>Places limitées.</strong></p>
+</header>
 
-<!-- QUI EST MARYAM -->
-<div style="background:var(--cream); padding: 80px 24px;">
-<div class="section-light" style="padding-top:0; padding-bottom:0;">
-  <span class="section-label">Qui intervient ce soir-là</span>
-  <h2>Pas une coach.<br><em>Une femme</em> qui a agi.</h2>
-
-  <div class="maryam-block">
-    <p class="body-text">
-      La Frontalière Luxembourg, c'est Maryam — installée dans la région de Thionville, elle parle au quotidien aux résidentes et frontalières du Luxembourg.
-      Depuis plusieurs années, elle documente et vulgarise les réalités du travail au Luxembourg :
-      les salaires, la fiscalité, les droits sociaux, les opportunités.
-      Mais surtout, elle <strong>investit</strong>.
-      Avec près d'<strong style="color:var(--rose);">1 million d'euros de patrimoine immobilier constitué</strong>,
-      elle a bâti une stratégie concrète et accessible — sans héritage, sans apport magique.
-      Ce soir, elle ouvre son cas réel. Chiffres inclus.
+<!-- MOT DE MARYAM -->
+<section>
+  <div class="mot">
+    <span class="label">Le mot de Maryam</span>
+    <p>
+      Depuis que je partage du contenu sur le Luxembourg, une chose revient sans arrêt : les meilleures opportunités ne se trouvent pas sur les sites d'annonces, elles passent par les bonnes personnes. C'est exactement pour ça que j'organise cet afterwork. Pas un évènement de plus, mais une vraie occasion de rencontrer des gens qui vivent la même réalité que toi, et avec qui les choses peuvent avancer.
     </p>
-
-    <div class="stat-grid">
-      <div class="stat-item">
-        <span class="stat-number">~1M€</span>
-        <span class="stat-desc">de patrimoine immobilier constitué</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">26K</span>
-        <span class="stat-desc">abonnés TikTok frontaliers</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">9K</span>
-        <span class="stat-desc">abonnés Instagram</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">300+</span>
-        <span class="stat-desc">membres dans la communauté</span>
-      </div>
-    </div>
+    <div class="signature">Maryam, La Frontalière Luxembourg</div>
   </div>
-</div>
-</div>
+</section>
 
-<div class="divider-line"></div>
+<div class="divider"></div>
 
-<!-- INTERVENTION IMMO -->
-<div class="section-dark">
-<div class="section-dark-inner">
-  <span class="section-label">L'intervention du soir</span>
-  <h2>De zéro à 300€/mois<br><em>avec un seul bien.</em></h2>
+<!-- PROBLEM -->
+<section>
+  <span class="label">Le constat</span>
+  <h2>Travailler au Luxembourg sans réseau, c'est passer à côté des meilleures opportunités</h2>
+  <p>
+    Tu connais les salaires, les avantages, le potentiel du marché luxembourgeois. Mais les vraies opportunités, celles qui font basculer une carrière, ne passent presque jamais par une annonce.
+  </p>
+  <p>Elles passent par les bonnes personnes, au bon moment.</p>
 
-  <p class="body-text">
-    Pas de théorie. Pas de slides génériques. Maryam ouvre son cas concret : un appartement à Thionville,
-    une stratégie locative construite à côté d'un salaire au Luxembourg, et un cash-flow qui tourne chaque mois.
+  <ul class="prob-list">
+    <li>Tu fais l'aller-retour chaque jour sans jamais construire de réseau sur place.</li>
+    <li>Les évènements pro luxembourgeois sont souvent trop formels, en luxembourgeois, ou hors de prix.</li>
+    <li>Tu cherches des offres en ligne alors que le marché fonctionne encore largement par recommandation.</li>
+    <li>Tu ne sais pas vraiment comment te positionner pour être repéré par les bonnes personnes.</li>
+  </ul>
+</section>
+
+<div class="divider"></div>
+
+<!-- OFFER -->
+<section>
+  <span class="label">L'afterwork</span>
+  <h2>Pas un networking impersonnel. Un format pensé pour aller droit au but.</h2>
+  <p>
+    En une soirée, dans une ambiance détendue, tu rencontres des personnes qui comprennent ta réalité de frontalier ou de résident, et avec qui les conversations utiles se nouent naturellement.
   </p>
 
-  <div class="immo-points">
-    <div class="immo-point">
-      <span class="immo-point-icon">⚠️</span>
-      <p><strong>L'erreur n°1</strong> que font 90% des femmes qui veulent investir autour du Luxembourg — et qui les bloque avant même de commencer.</p>
+  <div class="offer-grid">
+    <div class="offer-card">
+      <span class="num">01</span>
+      <h3>Des rencontres utiles</h3>
+      <p>Frontaliers, résidents, entrepreneurs, salariés. Un mélange orienté échanges concrets.</p>
     </div>
-    <div class="immo-point">
-      <span class="immo-point-icon">🏠</span>
-      <p><strong>Le vrai calcul</strong> d'un investissement locatif rentable : ce qu'on ne te dit pas dans les webinaires gratuits.</p>
+    <div class="offer-card">
+      <span class="num">02</span>
+      <h3>Un format intime</h3>
+      <p>Pas de salle bondée avec des badges. Un groupe restreint où tout le monde peut réellement se parler.</p>
     </div>
-    <div class="immo-point">
-      <span class="immo-point-icon">💡</span>
-      <p><strong>Comment financer</strong> sans apport massif — et profiter de sa situation (résidente ou frontalière) pour emprunter intelligemment.</p>
+    <div class="offer-card">
+      <span class="num">03</span>
+      <h3>Un cadre sans prise de tête</h3>
+      <p>All Pizza All Pasta à Terville. Buffet à volonté, un soft, une ambiance entre nous.</p>
     </div>
-    <div class="immo-point">
-      <span class="immo-point-icon">📈</span>
-      <p><strong>La logique patrimoniale</strong> appliquée de 0 à ~1M€ de patrimoine — étape par étape.</p>
+    <div class="offer-card">
+      <span class="num">04</span>
+      <h3>Une communauté qui dure</h3>
+      <p>Tu rejoins un réseau de frontaliers et de résidents qui s'entraident bien au-delà de la soirée.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FOR WHO -->
+<section>
+  <span class="label">Pour qui</span>
+  <h2>Cet afterwork est fait pour toi si</h2>
+  <ul class="aud-list">
+    <li>Tu travailles au Luxembourg ou tu veux y décrocher un poste mieux rémunéré.</li>
+    <li>Tu veux développer un réseau professionnel solide dans l'écosystème luxembourgeois.</li>
+    <li>Tu cherches à te repositionner, monter en grade ou changer de secteur.</li>
+    <li>Tu es entrepreneur et tu veux rencontrer des clients ou des partenaires.</li>
+    <li>Tu suis La Frontalière Luxembourg et tu veux enfin rencontrer la communauté en vrai.</li>
+    <li>Tu en as assez de networker dans le vide et tu veux un format qui produit des résultats.</li>
+  </ul>
+</section>
+
+<div class="divider"></div>
+
+<!-- PRICING -->
+<section>
+  <span class="label">Tarif</span>
+  <h2>Simple et tout compris.</h2>
+
+  <div class="pass">
+    <div class="pass-head">
+      <div class="price">30 €</div>
+      <div class="price-sub">par personne, paiement sécurisé en ligne</div>
+    </div>
+    <hr class="pass-divider">
+    <div class="pass-body">
+      <ul class="pass-incl">
+        <li>Buffet à volonté (pizzas et pâtes)</li>
+        <li>Une boisson sans alcool incluse</li>
+        <li>L'accès à l'afterwork et à la communauté</li>
+        <li>Jeudi 25 juin 2026, à partir de 18h30</li>
+        <li>All Pizza All Pasta, 7 Boucle du Ferronnier, Terville</li>
+      </ul>
+      <a href="https://buy.stripe.com/9B6fZga4BdJm3nr4xndUY0l" class="btn" target="_blank" rel="noopener">Je réserve ma place</a>
     </div>
   </div>
 
-  <div class="cashflow-box">
-    <span class="cashflow-big">~300€</span>
-    <span class="cashflow-label">Cash-flow mensuel net · un seul bien à Thionville</span>
-  </div>
-</div>
-</div>
-
-<div class="divider-line"></div>
-
-<!-- PROGRAMME -->
-<div style="background:var(--cream); padding: 80px 24px;">
-<div class="section-light" style="padding-top:0; padding-bottom:0;">
-  <span class="section-label">La soirée</span>
-  <h2>Une soirée qui prend soin<br>de <em>toi</em> — entièrement.</h2>
-
-  <div class="cards-grid">
-    <div class="card">
-      <span class="card-icon">💅</span>
-      <h3>Prestation esthétique</h3>
-      <p>Ongles, cils, sourcils — tu choisis ta prestation parmi le menu complet.</p>
-    </div>
-    <div class="card">
-      <span class="card-icon">🥂</span>
-      <h3>Buffet & boissons</h3>
-      <p>Buffet salé et boissons soft offerts pour toute la soirée.</p>
-    </div>
-    <div class="card">
-      <span class="card-icon">🏠</span>
-      <h3>Intervention immo</h3>
-      <p>Un cas concret, chiffres réels : 300€/mois avec un seul bien.</p>
-    </div>
-    <div class="card">
-      <span class="card-icon">👩‍💼</span>
-      <h3>Networking</h3>
-      <p>15 femmes — résidentes au Luxembourg ou frontalières — ambitieuses. Un vrai réseau.</p>
-    </div>
-  </div>
-</div>
-</div>
-
-<div class="divider-line"></div>
-
-<!-- CLUB DES +10 -->
-<div class="section-dark">
-<div class="section-dark-inner">
-  <span class="section-label">Le Club des +10 — offre fondateur</span>
-  <h2>Rejoins le club<br><em>avant</em> de réserver.</h2>
-
-  <p class="body-text">
-    La Frontalière Club, c'est la communauté privée pour les résidentes et frontalières qui veulent aller plus loin.
-    En rejoignant maintenant, tu bénéficies du tarif fondateur garanti à vie —
-    et du −20% sur ta prestation dès le soir du 13 juin.
+  <p class="urgency">
+    Format intime, donc places limitées. Une fois complet, <strong>plus aucune inscription possible.</strong>
   </p>
+</section>
 
-  <div class="club-block">
-    <span class="club-price">19,99€<span style="font-size:22px; opacity:0.5;">/mois</span></span>
-    <span class="club-price-note">Tarif fondateur garanti à vie · Après 30 places → 29,99€/mois</span>
+<div class="divider"></div>
 
-    <ul class="club-perks">
-      <li>−20% sur toutes les prestations chez nos partenaires esthétique (dont ce soir-là)</li>
-      <li>Accès prioritaire et tarif réduit à tous les événements du club</li>
-      <li>Réductions exclusives chez nos partenaires (beauté, loisirs, services au Luxembourg)</li>
-      <li>Replay complet de l'intervention immobilier + cas pratique inclus</li>
-      <li>Accès à la communauté privée des 300+ membres</li>
-    </ul>
+<!-- LOCATION -->
+<section>
+  <span class="label">Le lieu</span>
+  <h2>All Pizza All Pasta, Terville</h2>
+  <div class="loc">
+    <h3>All Pizza All Pasta</h3>
+    <p>
+      7 Boucle du Ferronnier<br>
+      57100 Terville (Moselle)<br>
+      Parking disponible sur place.
+    </p>
+  </div>
+</section>
 
-    <a href="https://book.stripe.com/14AbJ00u1gVy3nr0h7dUY0k" class="btn">Je réserve + je rejoins le club</a>
+<div class="divider"></div>
 
-    <div class="club-urgency">
-      <strong>Ce soir compte double.</strong> En rejoignant le club avant l'événement, le −20% s'applique dès le 13 juin.
-      Rien que cette réduction couvre plusieurs mois d'abonnement.
+<!-- FAQ -->
+<section>
+  <span class="label">Questions fréquentes</span>
+  <h2>Ce que tu te demandes sûrement</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <h3>Est-ce réservé aux frontaliers ?</h3>
+      <p>Non. L'afterwork réunit frontaliers et résidents luxembourgeois. Ce qui compte, c'est le lien avec l'écosystème du Luxembourg.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Que se passe-t-il après l'inscription ?</h3>
+      <p>Tu règles en ligne et tu reçois une confirmation. Tu recevras tous les détails pratiques avant le 25 juin.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Y a-t-il des présentations ou du pitch ?</h3>
+      <p>Non. Pas de slides, pas de micro. C'est un afterwork, pas un séminaire. De vraies conversations entre personnes qui ont des choses à se dire.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Pourquoi Terville et pas le Luxembourg ?</h3>
+      <p>Pour éviter aux frontaliers les bouchons du soir après une journée de travail, dans un lieu accessible et convivial.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Et si je ne peux finalement pas venir ?</h3>
+      <p>Le tarif couvre la réservation de ta place et le repas. Préviens-moi au plus tôt en cas d'empêchement.</p>
     </div>
   </div>
-</div>
-</div>
+</section>
 
-<div class="divider-line"></div>
+<div class="divider"></div>
 
-<!-- MENU PRESTATIONS -->
-<div style="background:var(--cream); padding: 80px 24px;">
-<div class="section-light" style="padding-top:0; padding-bottom:0;">
-  <span class="section-label">Le menu du soir</span>
-  <h2>Les prestations<br><em>disponibles.</em></h2>
+<!-- FINAL CTA -->
+<section class="final">
+  <h2>Le réseau ne se construit pas derrière un écran.</h2>
+  <p>Il se construit autour d'une table, avec les bonnes personnes. Le 25 juin, c'est cette table.</p>
+  <a href="https://buy.stripe.com/9B6fZga4BdJm3nr4xndUY0l" class="btn" target="_blank" rel="noopener">Réserver ma place à 30 €</a>
+  <p class="cta-note">Buffet à volonté et un soft inclus. Jeudi 25 juin 2026, à partir de 18h30.</p>
+</section>
 
-  <table class="prestations-table">
-    <thead>
-      <tr>
-        <th>Prestation</th>
-        <th style="text-align:right;">Prix normal</th>
-        <th style="text-align:right;">Prix membre</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Épilation Sourcils + Teinture Henné</td><td style="text-align:right;"><span class="price-normal">45€</span></td><td style="text-align:right;"><span class="price-club">36€</span><span class="economy">−9€</span></td></tr>
-      <tr><td>Manucure + Vernis Semi-Permanent</td><td style="text-align:right;"><span class="price-normal">60€</span></td><td style="text-align:right;"><span class="price-club">48€</span><span class="economy">−12€</span></td></tr>
-      <tr><td>BrowLift</td><td style="text-align:right;"><span class="price-normal">75€</span></td><td style="text-align:right;"><span class="price-club">60€</span><span class="economy">−15€</span></td></tr>
-      <tr><td>Manucure + Gel sur Ongle Naturel</td><td style="text-align:right;"><span class="price-normal">85€</span></td><td style="text-align:right;"><span class="price-club">68€</span><span class="economy">−17€</span></td></tr>
-      <tr><td>Rehaussement Cils + Teinture</td><td style="text-align:right;"><span class="price-normal">85€</span></td><td style="text-align:right;"><span class="price-club">68€</span><span class="economy">−17€</span></td></tr>
-      <tr><td>Extension Cil à Cil</td><td style="text-align:right;"><span class="price-normal">85€</span></td><td style="text-align:right;"><span class="price-club">68€</span><span class="economy">−17€</span></td></tr>
-      <tr><td>Pack Rehaussement Cils + Épilation + Teinture</td><td style="text-align:right;"><span class="price-normal">90€</span></td><td style="text-align:right;"><span class="price-club">72€</span><span class="economy">−18€</span></td></tr>
-      <tr><td>Extension Volume Mixte</td><td style="text-align:right;"><span class="price-normal">100€</span></td><td style="text-align:right;"><span class="price-club">80€</span><span class="economy">−20€</span></td></tr>
-      <tr><td>Pack Extension Cil + Épilation + Teinture Sourcils</td><td style="text-align:right;"><span class="price-normal">110€</span></td><td style="text-align:right;"><span class="price-club">88€</span><span class="economy">−22€</span></td></tr>
-      <tr><td>Pack Manucure + Pédicure avec dépose</td><td style="text-align:right;"><span class="price-normal">120€</span></td><td style="text-align:right;"><span class="price-club">96€</span><span class="economy">−24€</span></td></tr>
-      <tr><td>Extension Volume Russe</td><td style="text-align:right;"><span class="price-normal">130€</span></td><td style="text-align:right;"><span class="price-club">104€</span><span class="economy">−26€</span></td></tr>
-      <tr><td>Pack Extension Cil + Épilation + BrowLift</td><td style="text-align:right;"><span class="price-normal">140€</span></td><td style="text-align:right;"><span class="price-club">112€</span><span class="economy">−28€</span></td></tr>
-    </tbody>
-  </table>
-
-  <div class="rappel">
-    💡 Ton acompte de 30€ est déduit directement du prix de ta prestation le soir J. Tu ne paies que le solde restant sur place.
-  </div>
-</div>
-</div>
-
-<div class="divider-line"></div>
-
-<!-- COMMENT CA MARCHE -->
-<div style="background:var(--cream); padding: 80px 24px;">
-<div class="section-light" style="padding-top:0; padding-bottom:0;">
-  <span class="section-label">Réservation</span>
-  <h2>Comment ça<br><em>fonctionne.</em></h2>
-
-  <div class="steps">
-    <div class="step">
-      <span class="step-num">1</span>
-      <div>
-        <h3>Tu réserves avec 30€ d'acompte</h3>
-        <p>L'acompte est non remboursable et sécurise ta place parmi les 15 disponibles. Paiement sécurisé par Stripe.</p>
-      </div>
-    </div>
-    <div class="step">
-      <span class="step-num">2</span>
-      <div>
-        <h3>Maryam te contacte personnellement</h3>
-        <p>Une fois ta place réservée, elle te confirme ta prestation et te propose de rejoindre le Club des +10 pour bénéficier du −20% le soir J.</p>
-      </div>
-    </div>
-    <div class="step">
-      <span class="step-num">3</span>
-      <div>
-        <h3>Le 13 juin à 18h30, tu arrives</h3>
-        <p>Buffet, boissons, accueil. L'intervention immo commence à 19h00, dans une ambiance intime entre vous 15.</p>
-      </div>
-    </div>
-    <div class="step">
-      <span class="step-num">4</span>
-      <div>
-        <h3>Tu paies le solde sur place</h3>
-        <p>Les 30€ sont déduits directement. Les membres du club payent avec la réduction −20%.</p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-<div class="divider-line"></div>
-
-<!-- LIEU -->
-<div style="background:var(--cream); padding: 80px 24px;">
-<div class="section-light" style="padding-top:0; padding-bottom:0;">
-  <span class="section-label">Accès</span>
-  <h2>Où nous<br><em>retrouver.</em></h2>
-
-  <div class="lieu-block">
-    <div class="lieu-info">
-      <h3>Centre esthétique de Sarah</h3>
-      <p>
-        11, Rue des 3 Cantons<br>
-        Windhof (Koerich) L-8399<br>
-        Luxembourg<br><br>
-        Accès depuis Thionville et la Moselle en environ 30 minutes.
-      </p>
-      <div class="parking-badge">🅿️ Parking gratuit sur place</div>
-    </div>
-    <div class="lieu-map">
-      <span style="font-size:32px;">📍</span>
-      <span>Windhof (Koerich)<br>Luxembourg</span>
-      <a href="https://maps.google.com/?q=11+Rue+des+3+Cantons+Windhof+Koerich+Luxembourg" target="_blank">Ouvrir dans Google Maps</a>
-    </div>
-  </div>
-</div>
-</div>
-
-<!-- FOOTER CTA -->
-<div class="footer-cta">
-  <h2>15 places.<br><em>Pas une de plus.</em></h2>
-  <p>La soirée commence à 18h30. Une fois les places parties, c'est terminé.</p>
-  <a href="https://book.stripe.com/14AbJ00u1gVy3nr0h7dUY0k" class="btn">Je réserve ma place — 30€</a>
-  <span class="btn-note" style="color:rgba(255,255,255,0.35); display:block; margin-top:14px;">Paiement sécurisé par Stripe · Acompte déduit de ta prestation</span>
-
-  <div class="footer-meta">
-    <strong style="color:var(--rose-light);">La Frontalière Luxembourg</strong> · Événement privé · 15 places<br>
-    Questions ? <a href="https://instagram.com/lafrontaliereluxembourg">@lafrontaliereluxembourg</a>
-  </div>
-</div>
-
-<!-- STICKY BAR -->
-<div class="sticky-bar">
-  <div class="sticky-info">
-    <strong>Glow Up &amp; Grow Up · 13 juin · 18h30</strong>
-    <small>15 places · Windhof, Luxembourg</small>
-  </div>
-  <a href="https://book.stripe.com/14AbJ00u1gVy3nr0h7dUY0k" class="btn-sticky">Réserver — 30€</a>
-</div>
+<footer>
+  La Frontalière Luxembourg · Afterwork Terville · Juin 2026<br>
+  Paiement sécurisé via Stripe
+</footer>
 
 </body>
 </html>
